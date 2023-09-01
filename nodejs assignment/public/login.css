@@ -1,0 +1,33 @@
+.header-part{
+    text-align: center;
+    background-color: aquamarine;
+    padding: 1%;
+    border: 1px solid rgb(67, 151, 99);
+}
+
+.middle-part{
+    margin-top: 200px;
+    margin-left: 550px;
+}
+
+.login{
+    margin-left: 54px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.middle-part-button {
+    position: relative;
+    right: 25px;
+    top: 10px;
+  }
+  
+.middle-part-button2 {
+    position: relative;
+    left: 10px;
+    top: 10px;
+  }
+  

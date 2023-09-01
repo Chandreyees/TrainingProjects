@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="tv1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+    <div>
+        <div class="header-part">
+            <h1 style="font-size:larger; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">
+              Result Management System</h1>
+              <div class="log-out">
+                <a href="/home" class="btn btn-outline-primary btn-sm" role="button">Logout</a>
+               
+              </div>
+          </div>
+    </div>
+
+    <div class="middle-part">
+        <div class="middle-part-top">
+        <a href="/teacher2" class="middle-part-button btn btn-primary btn-group-lg" role="button"> Add Record</a>
+            
+        </div>
+        <div class="middle-part-middle">
+            <p> Total <%= dataList.length %>  student</p>
+                <div class="middle-part-table">
+            <table class="table table-bordered ">
+                <tr>
+                    <th class="roll">Roll no</th>
+                    <th class="name">Name</th>
+                    <th class="dob">Date Of Birth</th>
+                    <th class="score">Score</th>
+                    <th class="action">Actions</th>
+                </tr>
+                <% for(let i=0;i<dataList.length;i++){ %> 
+                <tr >
+                    <th><%=dataList[i].dataValues.id%> </th>
+                    <th><%=dataList[i].dataValues.name%> </th>
+                    <th><%=dataList[i].dataValues.dateOfBirth%> </th>
+                    <th><%=dataList[i].dataValues.score %> </th>
+                    <th> 
+                     <a href="/teacher1/<%= dataList[i].dataValues.id %> " class="btn-edit btn btn-outline-secondary" 
+                      role="button"><img src="images/edit.png" alt=""></a>
+                     <a href="/teacher2/<%= dataList[i].dataValues.id %> " class="btn-delete btn btn-outline-secondary" 
+                      role="button"> <img src="images/delete.png" alt=""></a> 
+                     
+                    </th>
+                </tr>
+                <% } %> 
+
+            </table>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
